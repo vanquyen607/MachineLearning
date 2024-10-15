@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán bằng mô hình ML</title>
+</head>
+<body>
+    <h2>Dự đoán bằng mô hình Machine Learning</h2>
+    <form action="/predict" method="post">
+        <label for="composition">Thành phần:</label>
+        <input type="text" id="composition" name="composition" required><br><br>
+        
+        <label for="uses">Công dụng:</label>
+        <input type="text" id="uses" name="uses" required><br><br>
+        
+        <input type="submit" value="Dự Đoán">
+    </form>
+    
+
+    <!-- Hiển thị kết quả dự đoán -->
+    {% if prediction_text %}
+    <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
